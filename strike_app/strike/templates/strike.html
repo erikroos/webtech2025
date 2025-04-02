@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stakingsformulier</title>
+</head>
+<body>
+    <h1>Doe mee met de staking!</h1>
+
+    <ul style="color:red">
+    {% for message in get_flashed_messages() %}
+        <li>{{message}}</li>
+    {% endfor %}
+    </ul>
+
+    <form method="POST">
+
+    {{form.hidden_tag()}}
+
+    <div>
+    {{form.name.label()}}
+    {{form.name()}}
+    </div>
+
+    <div>
+    {{form.age.label()}}
+    {{form.age()}}
+    </div>
+
+    <div>
+    {{form.strike.label()}}
+    {{form.strike(style="list-style: none")}}
+    </div>
+
+    <div>
+    {{form.submit()}}
+    </div>
+
+    </form>
+</body>
+</html>
