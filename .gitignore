@@ -1,3 +1,7 @@
+# venv's
+.venv/
+.venv-mac/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

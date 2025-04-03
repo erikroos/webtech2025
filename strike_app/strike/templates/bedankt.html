@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bedankt</title>
-</head>
-<body>
-    <p><a href="{{url_for('index')}}">Home</a></p>
+{% extends 'base.html' %}
 
-    <ul>
-    {% for message in get_flashed_messages() %}
-        <li>{{message}}</li>
-    {% endfor %}
-    </ul>
+{% block title %}
+Bedankt
+{% endblock %}
 
-    <p>Bedankt {{session["name"]}} voor het invullen</p>
-</body>
-</html>
+{% block content %}
+<ul>
+{% for message in get_flashed_messages() %}
+    <li>{{message}}</li>
+{% endfor %}
+</ul>
+
+<p>Bedankt {{session["name"]}} voor het invullen</p>
+{% endblock %}
