@@ -2,6 +2,10 @@
 .venv/
 .venv-mac/
 
+# DB stuff
+migrations/
+instance/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
